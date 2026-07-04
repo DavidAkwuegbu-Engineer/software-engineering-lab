@@ -24,6 +24,10 @@ Each lesson should train the habits of a strong engineer:
 
 Use [git-github-workflow.md](git-github-workflow.md) to practice commits and GitHub publishing as part of every lesson.
 
+## Project Ladder
+
+Use [project-ladder.md](project-ladder.md) to build increasingly stronger projects from the fundamentals.
+
 ## Current Lesson
 
 Start here:

@@ -30,4 +30,6 @@ The goal is to become a strong, security-minded software engineer across Python,
 
 Lesson 1 is in `01-python-fundamentals/lesson-01`. It starts with Python input validation, functions, exceptions, and unit tests.
 
+Project 1 is in `01-python-fundamentals/project-01-developer-profile-cli`. It turns the same fundamentals into a portfolio-oriented Python CLI project.
+
 Current setup note: Python 3.14.3 is available through the Python Install Manager shim at `C:\Users\akwue\AppData\Local\Python\bin\python.exe`. The plain `python` command is still shadowed by broken WindowsApps aliases on this machine.
