@@ -36,6 +36,12 @@ python -m unittest discover -s tests -v
 
 If Python does not launch, fix the local Python installation before continuing. Lesson 1 uses only the Python standard library.
 
+On this Windows machine, the reliable Python command found by the environment check is:
+
+```powershell
+C:\Users\akwue\AppData\Local\Python\bin\python.exe -m unittest discover -s tests -v
+```
+
 ## Roadmap
 
 - `01-python-fundamentals`: syntax, functions, validation, files, errors, testing, command-line tools.

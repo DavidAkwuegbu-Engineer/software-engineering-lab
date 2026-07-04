@@ -3,7 +3,13 @@ $ErrorActionPreference = "Stop"
 Write-Host "Lesson 1 environment check"
 Write-Host "Workspace: $(Resolve-Path ..\..)"
 
-$launchers = @("python", "py", "python3")
+$launchers = @(
+    "python",
+    "py",
+    "python3",
+    (Join-Path $env:LOCALAPPDATA "Python\bin\python.exe"),
+    (Join-Path $env:LOCALAPPDATA "Python\bin\python3.exe")
+)
 $workingLauncher = $null
 
 foreach ($launcher in $launchers) {

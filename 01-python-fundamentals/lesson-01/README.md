@@ -12,6 +12,12 @@ You will verify with:
 
 - `python -m unittest discover -s tests -v`
 
+If `python` resolves to a broken WindowsApps alias, use the command printed by the environment check. On this machine, that command is:
+
+```powershell
+C:\Users\akwue\AppData\Local\Python\bin\python.exe -m unittest discover -s tests -v
+```
+
 ## First Checkpoint
 
 Run the environment check:

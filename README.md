@@ -30,5 +30,4 @@ The goal is to become a strong, security-minded software engineer across Python,
 
 Lesson 1 is in `01-python-fundamentals/lesson-01`. It starts with Python input validation, functions, exceptions, and unit tests.
 
-Current setup blocker: Python must be installed or repaired before the Lesson 1 tests can run.
-
+Current setup note: Python 3.14.3 is available through the Python Install Manager shim at `C:\Users\akwue\AppData\Local\Python\bin\python.exe`. The plain `python` command is still shadowed by broken WindowsApps aliases on this machine.
