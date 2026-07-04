@@ -97,6 +97,62 @@ git push -u origin main
 
 Replace `YOUR-USERNAME` with the GitHub account name you created.
 
+## Repository Not Found
+
+If `git push -u origin main` returns:
+
+```text
+remote: Repository not found.
+fatal: repository 'https://github.com/.../software-engineering-lab.git/' not found
+```
+
+Check these in order:
+
+1. The repository exists on GitHub.
+2. The URL uses your exact GitHub username, not your display name.
+3. The repository name matches exactly: `software-engineering-lab`.
+4. You are signed in to the GitHub account that owns the repository.
+5. If the URL is wrong, fix it instead of adding another `origin`:
+
+```powershell
+git remote set-url origin https://github.com/YOUR-USERNAME/software-engineering-lab.git
+git remote -v
+git push -u origin main
+```
+
+For a brand-new learning repo, create it empty on GitHub first. Do not add a README, `.gitignore`, or license on GitHub if those files already exist locally.
+
+## Permission Denied To Another Account
+
+If `git push -u origin main` returns:
+
+```text
+remote: Permission to YOUR-USERNAME/software-engineering-lab.git denied to OTHER-ACCOUNT.
+fatal: unable to access 'https://github.com/YOUR-USERNAME/software-engineering-lab.git/': The requested URL returned error: 403
+```
+
+GitHub found the repository, but Git authenticated with the wrong GitHub account. Commit identity and push identity are separate:
+
+- `git config user.name` controls the name written into commits.
+- Git Credential Manager controls which GitHub account is used when pushing.
+
+Check the current local commit identity:
+
+```powershell
+git config --get user.name
+git config --get user.email
+```
+
+Then remove the wrong cached GitHub login and sign in with the account that owns the repository:
+
+```powershell
+git credential-manager github logout OTHER-ACCOUNT
+git credential-manager github login
+git push -u origin main
+```
+
+Replace `OTHER-ACCOUNT` with the account shown in the error message.
+
 ## Portfolio Rule
 
 Every lesson should end with:
